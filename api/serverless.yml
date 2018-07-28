@@ -1,5 +1,5 @@
 # NOTE: update this with your service name
-service: names
+service: names-app
 
 # Use the serverless-webpack plugin to transpile ES6
 plugins:
@@ -42,4 +42,4 @@ functions:
           path: names/{id}
           method: get
           cors: true
-          authorizer: aws_iam
+          # authorizer: aws_iam
