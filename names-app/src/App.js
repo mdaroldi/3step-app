@@ -9,7 +9,7 @@ import { Auth } from "aws-amplify";
 class App extends Component {
   constructor(props) {
     super(props);
-
+  
     this.state = {
       isAuthenticated: false,
       isAuthenticating: true
@@ -44,16 +44,17 @@ class App extends Component {
       isAuthenticated: this.state.isAuthenticated,
       userHasAuthenticated: this.userHasAuthenticated
     };
+
     return (
       !this.state.isAuthenticating &&
       <div className="App container">
         <Navbar fluid collapseOnSelect>
           <Navbar.Header>
             <Navbar.Brand>
-              <Link to="/">Names</Link>
+              <Link to="/">Nomes</Link>
             </Navbar.Brand>
             <Navbar.Brand>
-              <Link to="/names/1">Busca</Link>
+              <Link to="/names/new">Busca</Link>
             </Navbar.Brand>
               <Navbar.Toggle />
           </Navbar.Header>  
@@ -78,5 +79,6 @@ class App extends Component {
     );
   }
 }
+
 
 export default withRouter(App);
